@@ -1,0 +1,82 @@
+
+
+<html>
+
+<head>
+<title>WITNESS</title>
+<meta http-equiv="Content Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" href="css/webcam.css" type= "text/css"charset="utf-8"/>
+
+</head>
+<body>
+<style scoped>
+<!-- 	video {-webkit-transform: scaleX(1); } -->
+	p { text-align: center; }
+</style>
+
+<div id="splash">
+
+	<p id="errorMessage">Loading...</p>
+	
+</div>
+
+<div id="app" hidden>
+
+	<p><video id="monitor" autoplay></video> <canvas id="photo"></canvas></p>
+
+</div>
+
+<div id="lineup">
+
+		<img src="http://itp.nyu.edu/~rnr217/FRISKED_DOC/images/latinogangsta.jpeg" width="251" height="201"class="images"/>
+		<img src="http://itp.nyu.edu/~rnr217/FRISKED_DOC/images/jdakar.jpeg" width="200" height="129" class="images"/>
+		<img src="http://itp.nyu.edu/~rnr217/FRISKED_DOC/images/Trayvon_Martin1.png" width="226" height="150" class="images"/>
+		<img src="http://itp.nyu.edu/~rnr217/FRISKED_DOC/images/plaidsuit.png" width="226" height="150" class="images"/>
+		<img src="http://itp.nyu.edu/~rnr217/FRISKED_DOC/images/chris.png" width="226" height="150" class="images"/>
+		<img src="http://itp.nyu.edu/~rnr217/FRISKED_DOC/images/monroe.jpg" width="150" height="150" class="images"/>
+</div>
+
+<script>
+
+if (navigator.webkitGetUserMedia) {
+
+	navigator.webkitGetUserMedia('video', gotStream, noStream);
+
+	var video = document.getElementById('monitor');
+	var canvas = document.getElementById('photo');
+
+	function gotStream(stream) {
+
+		video.src = webkitURL.createObjectURL(stream);
+		video.onerror = function () {
+			stream.stop();
+			streamError();
+		};
+		document.getElementById('splash').hidden = true;
+		document.getElementById('app').hidden = false;
+	}
+
+	function noStream() {
+		document.getElementById('errorMessage').textContent = 'No camera available.';
+	}
+
+	function streamError() {
+		document.getElementById('errorMessage').textContent = 'Camera error.';
+	}
+
+	function snapshot() {
+		canvas.width = video.videoWidth;
+		canvas.height = video.videoHeight;
+		canvas.getContext('2d').drawImage(video, 0, 0);
+	}
+
+} else {
+	document.getElementById('errorMessage').textContent = 'No native camera support available.';
+}
+
+</script>
+
+ <script type="text/javascript" src="js/webcam.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+
+body{
+background-color: black;
+width: 600px;
+height: 500px;
+
+}
+
+#lineup{
+
+width:450px;
+height:1000px;
+display: inline;
+
+.gangsta{
+    -webkit-animation-name: fade_in;
+     -webkit-animation-duration: 2s;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes fade_in{
+    0%   {
+         opacity: 0.0;
+    }
+    25%   {
+     
+        opacity: 0.2;
+    }
+
+    }
+    75% {
+       
+         opacity: 0.6;
+    }
+    100% {
+       
+         opacity: 1.0;
+    }
+}
+
+
+
+video{
+
+float: right;
+  width: 207px;
+  height: 150px;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid #ccc;
+
+}
+

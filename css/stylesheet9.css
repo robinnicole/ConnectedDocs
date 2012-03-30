@@ -1,0 +1,148 @@
+
+@font-face{
+
+font-family: UrbanSketch;
+src:('fonts/urban.ttf');
+
+}
+h1 {
+font-family:'UrbanSketch';
+text-align: center;
+color: #ED7300;
+font-size:60px;
+}
+
+body{
+
+background-color:rgb(75,73,73); 
+
+}
+
+.display_none{
+
+display: none;}
+img
+{
+opacity:0.7;
+
+}
+
+#movieplayer{
+position: absolute; 
+width: 400px;
+height: 400px;
+background-color:black; 
+border-radius: 10px 10px 10px 10px;
+color: white;
+}
+
+
+video{
+
+position: absolute;
+width: 300px;
+height: 285px;
+margin-left: 80px;
+margin-top: 50px;
+}
+
+
+#witnessdiv{
+background-color: white;
+
+
+}
+
+#processing_div{
+
+position: absolute;
+margin-left: 450px;
+
+}
+
+#male{
+
+ 
+float: right;
+border-radius: 10px 10px 10px 10px;
+font-style: italic;
+display: inline;
+
+}
+
+
+
+
+/*
+
+.buttons{
+
+position: absolute;
+left:150px;
+background-color: #ED7300;
+margin-bottom: 10px;
+width:100px;
+height:40px;
+color: white;
+*/
+
+
+#synopsis{
+
+top: 52px;
+border-radius: 8px 8px 8px 8px;
+color: white;
+}
+
+#storyboards{
+top: 135px;
+border-radius: 8px 8px 8px 8px;
+color: white;
+}
+
+#Research{
+
+top: 200px;
+border-radius: 8px 8px 8px 8px;
+color: white;
+}
+
+#play{
+color: white;
+text-align: center;
+
+background-color: #ED7300;
+position: absolute;
+left: 150px;
+top: 415px;
+width: 100px;
+border-radius: 10px 10px 10px 10px;
+cursor: pointer;
+}
+
+#play:hover{
+
+text-decoration: underline;
+
+}
+#Intro{
+
+background-color: gray;
+width: 100%;
+text-align: left;
+padding: 10px;
+
+
+}
+#story_flow{
+
+margin: auto 0;
+background-color: gray;
+padding-left: 10px;
+}
+
+.break{
+
+background-color: white;
+}
+
